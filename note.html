@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>readux 的一些概念</h1>
+    <p>import {createStore} from 'redux'</p>
+
+    <ul>
+        <li>
+            1.const store = createStore(reducer)
+            <div>
+                创建一个转态容器
+            </div>
+        </li>
+        <li>
+            2. subscribe 在store上的api 去订阅数据的更新
+            store.subscribe(function(){
+
+            })
+        </li>
+        <li>
+            3.获取数据 store.getState() 返回store当中的最新数据
+        </li>
+        <li>
+            4.dispatch 通过store.dispatch(action)去更改store当中
+            的数据
+        </li>
+    </ul>
+
+    <h2>概念：</h2>
+    <ul>
+        <li>1. reducer是一个纯函数，不能在里面操作外面的数据，而是应该
+            根据传入action的不同，去返回新的数据
+        </li>
+        <li>
+            2.action 是指一个动作，唯一改变store当中数据的方法
+            是去dispatch触发一个action,那么action在代码当中是一个
+            纯对象。 const action= {type:'INCREMENT'}
+        </li>
+    </ul>
+</body>
+</html>
